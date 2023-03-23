@@ -48,7 +48,7 @@ runs:
               cd ..
               git clone https://${{ inputs.username }}:${{ inputs.token }}@github.com/${{ inputs.username }}/${{ inputs.reponame }}.git -b gh-pages gh-pages
               cd gh-pages
-              cp -R ../docs/ .
+              cp -R ../docs/* .
               git config --global user.email "${{ inputs.gitemail }}"
               git config --global user.name "${{ inputs.gitname }}"
               git add -A
