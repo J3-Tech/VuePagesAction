@@ -46,7 +46,7 @@ runs:
               ln -s index.html 404.html
               if [ "none" !=  ${{ inputs.cname }} ]; then echo '${{ inputs.cname }}' > CNAME; fi
               cd ..
-              git clone https://${{ inputs.username }}:${{ inputs.token }}@github.com/${{ inputs.username }}/${{ inputs.reponame }}.git -b gh-pages
+              git clone https://${{ inputs.username }}:${{ inputs.token }}@github.com/${{ inputs.username }}/${{ inputs.reponame }}.git -b gh-pages gh-pages
               cd gh-pages
               cp -R ../docs/ .
               git config --global user.email "${{ inputs.gitemail }}"
